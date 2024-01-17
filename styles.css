@@ -130,7 +130,7 @@ html{
 }
 
 body{ 
-  background: linear-gradient(black, rgb(0, 0, 75));
+  background: linear-gradient(black, rgb(0, 64, 116));
 }
 
 
@@ -279,8 +279,8 @@ article.active {
 }
 
 .title-text-1{
-  font-family: var(--ff-cookie);
-  font-size: 40px;
+  font-family: var(--ff-love-like);
+  font-size: 25px;
   letter-spacing: 2px;
   color: var(--white-2);
   font-weight: var(--fw-400)
@@ -317,7 +317,7 @@ main {
 }
 
 .avatar-box {
-  background: var(--bg-gradient-onyx);
+  background: rgba(255, 0, 0, 0);
   border-radius: 20px;
 }
 
@@ -362,7 +362,7 @@ main {
 
 .info_more-btn:hover::before,
 .info_more-btn:focus::before { 
-  background: var(--bg-gradient-yellow-2); 
+  background: linear-gradient(60deg, rgb(0, 0, 0), rgb(0, 119, 255)); 
 }
 
 .info_more-btn span { 
@@ -526,7 +526,7 @@ main {
   left: -33px;
   height: 6px;
   width: 6px;
-  background: var(--text-gradient-yellow);
+  background: white;
   border-radius: 50%;
   box-shadow: 0 0 0 4px var(--jet);
 }
