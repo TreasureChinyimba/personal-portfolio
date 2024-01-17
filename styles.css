@@ -560,14 +560,14 @@ main {
 }
 
 .skill-progress-bg {
-  background: var(--jet);
+  background: rgba(0, 0, 0, 0.151);
   width: 100%;
   height: 8px;
   border-radius: 10px;
 }
 
 .skill-progress-fill {
-  background: var(--text-gradient-yellow);
+  background: linear-gradient( to right, #70f5ff, #5cd9ff );
   height: 100%;
   border-radius: inherit;
 }
