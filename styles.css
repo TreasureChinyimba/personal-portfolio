@@ -130,7 +130,7 @@ html{
 }
 
 body{ 
-  background: linear-gradient(black, rgb(0, 64, 116));
+  background: linear-gradient(black, rgb(0, 57, 131));
 }
 
 
@@ -337,7 +337,7 @@ main {
   right: -15px;
   border-radius: 0 15px;
   font-size: 13px;
-  color: var(--orange-yellow-crayola);
+  color: whitesmoke;
   background: var(--border-gradient-onyx);
   padding: 10px;
   box-shadow: var(--shadow-2);
@@ -350,14 +350,14 @@ main {
   position: absolute;
   inset: 1px;
   border-radius: inherit;
-  background: var(--bg-gradient-jet);
+  background: rgba(0, 0, 0, 0.301);
   transition: var(--transition-1);
   z-index: -1;
 }
 
 .info_more-btn:hover,
 .info_more-btn:focus { 
-  background: var(--bg-gradient-yellow-1); 
+  background: linear-gradient( rgb(0, 0, 0), rgb(255, 255, 255)); 
 }
 
 .info_more-btn:hover::before,
@@ -474,7 +474,7 @@ main {
 }
 
 
-/* RESUME */
+/* PORTFOLIO */
 .article-title { margin-bottom: 30px; }
 
 
