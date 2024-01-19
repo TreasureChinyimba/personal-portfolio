@@ -58,9 +58,6 @@
         z-index: 4;
       }
 
-      .circle:hover {
-        background: red;
-      }
 
       .circle1 {
         width: 50px;
@@ -71,6 +68,10 @@
         position: absolute;
         pointer-events: none; /* Ensures the element does not interfere with mouse events */
       }
+
+      .highlight {
+        background: red; /* Change this to the desired color */
+    }
   
       </style>
 </head>
@@ -503,23 +504,16 @@ const tick = () => {
 // Start the animation loop
 tick();
 
-const circleOne = document.querySelector('.circle1');
-document.addEventListener("DOMContentLoaded", function () {
-  const follower = document.querySelector('.circle1'); // Change the selector to target the correct element
+const buttons = document.querySelectorAll('.button'); // Update the selector to match your HTML
+const circle = document.querySelector('.circle1');
 
-  document.addEventListener("mousemove", function (e) {
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
+buttons.forEach(button => {
+  button.addEventListener('mouseover', () => {
+    circle.classList.add('highlight');
+  });
 
-    // Adjust the speed by changing the divisor (e.g., 10)
-    const speed = 100;
-
-    // Calculate the new position with a slight delay
-    const newX = (mouseX - follower.offsetWidth / 2) / speed;
-    const newY = (mouseY - follower.offsetHeight / 2) / speed;
-
-    // Apply the new position to the follower element
-    follower.style.transform = `translate(${newX}px, ${newY}px)`;
+  button.addEventListener('mouseout', () => {
+    circle.classList.remove('highlight');
   });
 });
 
