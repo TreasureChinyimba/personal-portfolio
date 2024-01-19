@@ -44,13 +44,13 @@
 
   /*mouse styles8*/
       .circle {
-        --circle-size: 40px;
+        --circle-size: 10px;
         position: fixed;
         height: var(--circle-size);
         width: var(--circle-size);
         border: 1px solid white;
-        background: white;
-        box-shadow: 0 0 20px cyan;
+        background: rgb(255, 255, 255);
+        box-shadow: 0 0 30px cyan;
         border-radius: 100%;
         top: calc(var(--circle-size) / 2 * -1);
         left: calc(var(--circle-size) / 2 * -1);
@@ -58,11 +58,16 @@
         z-index: 4;
       }
 
+      .circle:hover {
+        background: red;
+      }
+
       .circle1 {
         width: 50px;
         height: 50px;
-        background-color: blue;
-        border-radius: 50%;
+        background-color: rgba(0, 183, 255, 0.39);
+        border-radius: 10%;
+        border: 3px solid black;
         position: absolute;
         pointer-events: none; /* Ensures the element does not interfere with mouse events */
       }
@@ -70,8 +75,10 @@
       </style>
 </head>
 <body>
-  <div class="circle"></div>
-  <div class="circle1"></div>
+  <div class="circle">
+    <div class="circle1"></div>
+  </div>
+  
     <main>
       
 
@@ -496,7 +503,7 @@ const tick = () => {
 // Start the animation loop
 tick();
 
-
+const circleOne = document.querySelector('.circle1');
 document.addEventListener("DOMContentLoaded", function () {
   const follower = document.querySelector('.circle1'); // Change the selector to target the correct element
 
@@ -505,7 +512,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const mouseY = e.clientY;
 
     // Adjust the speed by changing the divisor (e.g., 10)
-    const speed = 10;
+    const speed = 100;
 
     // Calculate the new position with a slight delay
     const newX = (mouseX - follower.offsetWidth / 2) / speed;
