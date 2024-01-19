@@ -57,11 +57,21 @@
         pointer-events: none;
         z-index: 4;
       }
+
+      .circle1 {
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        border-radius: 50%;
+        position: absolute;
+        pointer-events: none; /* Ensures the element does not interfere with mouse events */
+      }
   
       </style>
 </head>
 <body>
   <div class="circle"></div>
+  <div class="circle1"></div>
     <main>
       
 
@@ -485,6 +495,27 @@ const tick = () => {
 
 // Start the animation loop
 tick();
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const follower = document.querySelector('.circle1'); // Change the selector to target the correct element
+
+  document.addEventListener("mousemove", function (e) {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    // Adjust the speed by changing the divisor (e.g., 10)
+    const speed = 10;
+
+    // Calculate the new position with a slight delay
+    const newX = (mouseX - follower.offsetWidth / 2) / speed;
+    const newY = (mouseY - follower.offsetHeight / 2) / speed;
+
+    // Apply the new position to the follower element
+    follower.style.transform = `translate(${newX}px, ${newY}px)`;
+  });
+});
+
     </script>
 </body>
 </html>
