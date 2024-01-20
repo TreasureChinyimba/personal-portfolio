@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Treasure's portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-ZTSOmONK8klCIH3jx8p5MwSBLvHRhihiD9u6eE48XlqIWf6ig9CsBtux2lE2RbPb" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-z0qK3g8+Ckvw3phopV04GJVUn2cWVx5lMdpu4Uia4Ht8p+ZSN9uJ6vOu5+x9P10ylu5P+PpoI2vQxxs/x4+gag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    
@@ -74,6 +76,31 @@
         background: cyan;
         box-shadow: 0 0 20px cyan;
         border: white solid 2px;
+    }
+
+    /*tech stack style*/
+
+    .tech-section {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    .tech-icon {
+      font-size: 4rem;
+      margin: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .tech-section {
+        flex-direction: column;
+      }
+
+      .tech-icon {
+        font-size: 3rem;
+      }
     }
   
       </style>
@@ -202,6 +229,17 @@
   
                 <h3 class="h3">Technologies</h3>
               </div>
+
+              <section class="tech-section">
+                <i class="fab fa-html5 tech-icon" title="HTML"></i>
+                <i class="fab fa-css3-alt tech-icon" title="CSS"></i>
+                <i class="fab fa-js-square tech-icon" title="JavaScript"></i>
+                <i class="fab fa-react tech-icon" title="React.js"></i>
+                <i class="fab fa-php tech-icon" title="PHP"></i>
+                <i class="fab fa-node tech-icon" title="Node.js"></i>
+                <i class="fab fa-python tech-icon" title="Python"></i>
+              </section>
+            
                   
                 <ul class="skills-list content-card">
                   <li class="skills-item">
