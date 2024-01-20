@@ -31,7 +31,7 @@
             margin: 5px;
             padding: 10px;
             background-color: #3498db;
-            color: #fff;
+            color: #000000;
             transition: 0.2s;
             text-decoration: none;
             border-radius: 5px;
@@ -39,7 +39,7 @@
 
         .button:hover {
           background-color: #328dca;
-          color: #363636;
+          color: #ffffff;
       }
 
   /*mouse styles8*/
@@ -98,10 +98,12 @@
               <p class="title">Full stack developer</p>
             </div>
   
+           <div class="social">
             <button class="info_more-btn" data-sidebar-btn>
               <span>Show Contacts</span>
               <ion-icon name="chevron-down"></ion-icon>
             </button>
+           </div>
           </div>
   
           <div class="sidebar-info_more">
@@ -114,8 +116,12 @@
                 </div>
   
                 <div class="contact-info">
-                  <p class="contact-title">Email</p>
-                  <a href="mailto:Treasurearthur4@gmail.com" class="contact-link">Treasurearthur4@gmail.com</a>
+                  <div class="social">
+                    <p class="contact-title">Email</p>
+                  <a href="mailto:Treasurearthur4@gmail.com" class="contact-link">
+                  <p class="social">Treasurearthur4@gmail.com</p>
+                  </a>
+                  </div>
                 </div>
               </li>
   
@@ -131,17 +137,7 @@
               </li>
   
              
-  
-              <li class="contact-item">
-                <div class="icon-box">
-                  <ion-icon name="location-outline"></ion-icon>
-                </div>
-  
-                <div class="contact-info">
-                  <p class="contact-title">Location</p>
-                  <address>Lilayi, Lusaka, Zambia</address>
-                </div>
-              </li>
+
             </ul>
   
             <div class="separator"></div>
@@ -149,13 +145,13 @@
             <ul class="social-list">
               <li class="social-item">
                 <a href="https://github.com/TreasureChinyimba" class="social-link" target="_blank">
-                  <ion-icon name="logo-github"></ion-icon>
+                  <ion-icon name="logo-github" class="social"></ion-icon>
                 </a>
               </li>
   
               <li class="social-item">
                 <a href="https://www.linkedin.com/in/treasure-chinyimba-a72684232/" class="social-link" target="_blank">
-                  <ion-icon name="logo-linkedin"></ion-icon>
+                  <ion-icon name="logo-linkedin"  class="social"></ion-icon>
                 </a>
               </li>
             </ul>
@@ -509,6 +505,17 @@ tick();
 
 const buttons = document.querySelectorAll('.button'); // Update the selector to match your HTML
 const circle = document.querySelector('.circle1');
+const socials = document.querySelectorAll('.social');
+
+socials.forEach(social => {
+  social.addEventListener('mouseover', () => {
+    circle.classList.add('highlight');
+  });
+
+  social.addEventListener('mouseout', () => {
+    circle.classList.remove('highlight');
+  });
+});
 
 buttons.forEach(button => {
   button.addEventListener('mouseover', () => {
